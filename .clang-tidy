@@ -1,0 +1,47 @@
+---
+Checks: "
+    -*,
+    bugprone-*,
+
+    cert-*,
+    -cert-err58-cpp,
+
+    clang-diagnostic-*,
+    clang-analyzer-*,
+
+    concurrency-*,
+
+    google-*,
+    -google-readability-braces-around-statements,
+    -google-readability-namespace-comments,
+    -google-readability-todo,
+    -google-objc-*,
+
+    misc-*,
+    -misc-no-recursion,
+    -misc-use-anonymous-namespace,
+    -misc-non-private-member-variables-in-classes,
+
+    performance-*,
+    -performance-move-const-arg,
+    -performance-avoid-endl,
+    -performance-enum-size,
+
+    portability-*,
+
+    readability-*,
+    -readability-redundant-declaration,
+    -readability-avoid-return-with-void-value,
+    -readability-function-cognitive-complexity,
+    -readability-uppercase-literal-suffix,
+    -readability-redundant-access-specifiers,
+    -readability-math-missing-parentheses,
+"
+
+FormatStyle:     'file'
+
+CheckOptions:
+  - key: readability-identifier-length.IgnoredVariableNames
+    value: 'x|y|z|i|j|k|a|b|c'
+  - key: readability-identifier-length.IgnoredParameterNames
+    value: 'x|y|z|i|j|k|a|b|c'
